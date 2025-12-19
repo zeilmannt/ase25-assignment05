@@ -1,6 +1,7 @@
 package de.unibayreuth.se.taskboard;
 
 import de.unibayreuth.se.taskboard.api.dtos.TaskDto;
+import de.unibayreuth.se.taskboard.api.dtos.UserDto;
 import de.unibayreuth.se.taskboard.api.mapper.TaskDtoMapper;
 import de.unibayreuth.se.taskboard.business.domain.Task;
 import io.restassured.http.ContentType;
@@ -66,4 +67,34 @@ public class TaskBoardSystemTests extends AbstractSystemTest {
     }
 
     //TODO: Add at least one test for each new endpoint in the users controller (the create endpoint can be tested as part of the other endpoints).
+    /*@Test
+    void getAllUsers() {
+        var createdUsers = TestFixtures.createUsers(userService);
+
+        given()
+                .contentType(ContentType.JSON)
+                .when()
+                .get("/api/users")
+                .then()
+                .statusCode(200)
+                .body(".", hasSize(createdUsers.size()));
+    }
+
+    @Test
+    void getUserById() {
+        var createdUsers = TestFixtures.createUsers(userService);
+        var user = createdUsers.getFirst();
+
+        UserDto retrieved = given()
+                .contentType(ContentType.JSON)
+                .when()
+                .get("/api/users/{id}", user.getId())
+                .then()
+                .statusCode(200)
+                .extract()
+                .as(UserDto.class);
+
+        assertThat(retrieved.id()).isEqualTo(user.getId());
+        assertThat(retrieved.name()).isEqualTo(user.getName());
+    }*/
 }

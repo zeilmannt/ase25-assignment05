@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-//TODO: Add DTO for users.
+//Done: Add DTO for users.
 public record UserDto(
         UUID id,
 

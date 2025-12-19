@@ -35,7 +35,7 @@ public class TestFixtures {
     }
 
     public static List<User> createUsers(UserService userService) {
-        // TODO: Fix this after resolving the other TODOs.
+        // Done: Fix this after resolving the other TODOs.
         return USERS.stream()
                 .map(SerializationUtils::clone) // prevent issues when tests modify the fixture objects
                 .map(userService::create)

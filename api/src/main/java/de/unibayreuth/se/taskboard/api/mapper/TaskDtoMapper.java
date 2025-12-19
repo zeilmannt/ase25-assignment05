@@ -19,7 +19,7 @@ import java.util.UUID;
 @ConditionalOnMissingBean // prevent IntelliJ warning about duplicate beans
 @NoArgsConstructor
 public abstract class TaskDtoMapper {
-    //TODO: Fix this mapper after resolving the other TODOs.
+    //Done: Fix this mapper after resolving the other TODOs.
 
     @Autowired
     private UserService userService;

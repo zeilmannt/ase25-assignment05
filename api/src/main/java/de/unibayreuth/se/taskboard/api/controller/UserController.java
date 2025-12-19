@@ -29,7 +29,7 @@ public class UserController {
         private final UserService userService;
         private final UserDtoMapper userDtoMapper;
 
-        // TODO: Add GET /api/users endpoint to retrieve all users.
+        // Done: Add GET /api/users endpoint to retrieve all users.
         @GetMapping
         public List<UserDto> getAllUsers(){
                 return userService.getAllUsers().stream()
@@ -37,14 +37,14 @@ public class UserController {
                         .toList();
         }
 
-        // TODO: Add GET /api/users/{id} endpoint to retrieve a user by ID.
+        // Done: Add GET /api/users/{id} endpoint to retrieve a user by ID.
         @GetMapping("/{id}")
         public UserDto getUserById(@PathVariable UUID id){
                 User user = userService.getById(id);
                 return userDtoMapper.fromBusiness(user);
         }
 
-        // TODO: Add POST /api/users endpoint to create a new user based on a provided user DTO.
+        // Done: Add POST /api/users endpoint to create a new user based on a provided user DTO.
         @PostMapping
         @ResponseStatus
         public UserDto createUser(@Valid @RequestBody UserDto dto){

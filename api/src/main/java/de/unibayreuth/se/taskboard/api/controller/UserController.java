@@ -22,7 +22,7 @@ import java.util.UUID;
         )
 )
 @Tag(name = "Users")
-@Controller
+@RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
 public class UserController {

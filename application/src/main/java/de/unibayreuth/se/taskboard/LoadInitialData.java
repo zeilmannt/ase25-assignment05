@@ -29,6 +29,7 @@ class LoadInitialData implements InitializingBean {
         log.info("Deleting existing data...");
         userService.clear();
         taskService.clear();
+
         log.info("Loading initial data...");
         List<User> users = TestFixtures.createUsers(userService);
         List<Task> tasks = TestFixtures.createTasks(taskService);

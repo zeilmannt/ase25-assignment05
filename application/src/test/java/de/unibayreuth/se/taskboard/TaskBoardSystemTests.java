@@ -66,8 +66,8 @@ public class TaskBoardSystemTests extends AbstractSystemTest {
 
     }
 
-    //TODO: Add at least one test for each new endpoint in the users controller (the create endpoint can be tested as part of the other endpoints).
-    /*@Test
+    //Done: Add at least one test for each new endpoint in the users controller (the create endpoint can be tested as part of the other endpoints).
+    @Test
     void getAllUsers() {
         var createdUsers = TestFixtures.createUsers(userService);
 
@@ -96,5 +96,5 @@ public class TaskBoardSystemTests extends AbstractSystemTest {
 
         assertThat(retrieved.id()).isEqualTo(user.getId());
         assertThat(retrieved.name()).isEqualTo(user.getName());
-    }*/
+    }
 }
